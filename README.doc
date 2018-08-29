@@ -20,17 +20,6 @@ Paper [7] explores the use of machine-learning based alternatives to standard st
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 Technology
 
 Smart Electronics Health Record was made keeping in mind to ease the medical processes of detecting severe diseases and their treatment. Covering major human diseases like heart, kidney and lungs, we tried to provide an easy, user friendly and near perfect prediction for general people. Through the web based application merged with R Programming, a user just by sitting in their homes could know if his/her symptoms will lead to anything or are just temporary.
@@ -161,108 +150,6 @@ S.No	    Name	Description
 
 
 
- Visualization
- It is very important to visualize data before actually applying different algorithm. Visualization helps in seeing different kinds of relationship between different attributes of the data sets.
-
-   Heart 
-
-We saw that the attribute ‘Cp’ affects the most in predicting the heart diseases, ‘Chol’ following it. Many other attributes also play a prominent role in predicting heart disease.
-
-
- 
-Fig 1.1 Each Attribute importance for predicting Heart Disease
-         
-
-
-The relationship between ‘Thalach’ and ‘Op’ was also quite interesting. As we can see most of the occurrences are between are between 0.3 to 0.8 of OP and above 0.25 of thal  which implies that maximum heart rate is almost above 0.25 . 
-
-
-
- 
-Fig 1.2 Thalach and OP Parameters Relationship for Heart Disease
-
-
-
-The working of the neural networks algorithm helped us to understand more clearly about various attributes. 
-
-
-
-                         
-
-Fig 1.3 Neural net Graph for Heart dataset
-
-
-    Diabetes
-
-Diabetes could attack anyone, but most importantly pregnant women risks chances of catching diabetes. We can clearly see that as the rate of pregnancy increase the risk of diabetes increases.
-
-
- 
-           
-
-Fig 1.4 Pregnancy and the risk of Diabetes 
-
-
-The correlation plot gives all the 1s in the final boxes, which clearly indicates that all the attributes depend on each other for the correct prediction of diabetes.
-
-    
-
-Fig 1.5 Correlation table for Diabetes dataset : All Attributes are Important
-
-Also, it was interesting to see the box plot of serum insulin level and its effects on Diabetes, though there were some outliners too in the dataset. It can be seen that more people had low serum insulin levels than the ones who were diabetic.
-
- Fig 1.6 Serum insulin level Boxplot for Diabetes
- 
-
-Cancer
-
-The Graph between the Perimeter and Diagnosis of Breast cancer is pretty simple as women who have breast perimeter of 100-150 which is normal have shown no signs of breast cancer whereas the women with perimeters ranging from 50-140 have higher probability of breast cancer.
-
- 
-Fig 1.7 Breast perimeter and the likeliness of Cancer
-
-
-Smoothness of breasts ranging from 0.075 to 0.125 is an indication of having normal breasts whereas women with extremely low or high smoothness can be an indication of having a breast cancer.
-
- 
-                                                    
-Fig 1.8 Smoothness to Cancer Relationship
- Parkinson 
-
-The Decision Tree below predicts the outcome of the disease with considerable accuracy. The ppe attribute becomes the root of the tree, followed by apq and so on.
-
-    
-Fig 1.9 Decision Tree for Parkinson Disease with PPE attribute as root of the tree. 
-
-
-We saw that the attribute ‘PPE’ affects the most in predicting the Parkinson’s disease with ‘spread1’ following it. Other attributes has also played an important role in predicting Parkinson’s. 
-           
-Fig 1.10 Attribute importance Graph for Parkinson Disease
-  
- Kidney
-The interaction between Blood Glucose Random and Blood Urea is quite interesting as we can say that people who do not have kidney disease have low levels of urea and glucose compared to people suffering from kidney disease.
-
-
-           
-
-Fig 1.11 Blood Urea and Glucose relationship of Kidney
-
-
-Graph of hypertension and threat of CKD implies that people with low hypertension levels has a higher rate of Kidney disease then with moderate levels of Hypertension shows low rate of CKD and then again higher levels of Hypertension shows higher rate of CKD.
-
- 
-Fig 1.12 Hypertension with the likeliness of occurrence of Kidney Disease
-
-
-
-A simple plot between class variable and blood pressure shows that there are equal number of people who have CKD and who do not have CKD at lows levels of blood pressure but at higher levels of blood pressure the chances of CKD decreases but there have been some instances of CKD. 
-
- 
-
-Fig 1.13 Blood pressure and Kidney Disease Box Plot
-
-
-
 
 Classification
 
@@ -274,25 +161,19 @@ Logistic Regression
 Logistic regression is a classification regression model where the dependent variable is categorical and is needed to be classified in binary classes. The case of a binary dependent variable that is, where the output can take only two values, "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. Logistic regression is similar to linear regression but unlike it, logistic regression is a classification algorithm. In the project we used the caret module to implement the logistic regression on the given data to predict and classify the tests. 
 Logistic regression simply uses the technique of reducing the error function and hence deducing the equation for the line of predicted values as in linear regression but it uses a damping function to contain the values between 1 and 0. In general it proved to be a very accurate algorithm as it gave accuracy of 75% in all the datasets that we used. Its average accuracy was 78.3%. 
                            
-Fig 1.14 Logistic Regression Code Snipet
-
 
 Bayesian Logistic Regression
 
 Bayesian analyses of  binary or categorical outcomes typically rely on probability or mixed effects logistic regression models which do not have a marginal logistic structure for the individual outcomes. The BLR model for individual outcomes has a marginal logistic structure, simplifying interpretation and follow a Bayesian approach to estimation and inference, developing an efficient data augmentation algorithm for  computation.
 Bayesian logistic regression provide with accurate results of around 80%. It is a very efficient algorithm especially in the parkinson’s dataset in which it gave an accuracy of 87%.
  
-                          Fig 1.15 Bayesian Logistic Regression Code Snipet
-
-
+                    
 
 Decision Trees
 
 A decision tree is a flowchart-like structure in which each internal node represents a "test" on an attribute , each branch represents the outcome of the test, and each leaf node represents a class label. The paths from root to leaf represent classification rules.
 Decision tree is a classification technique that is easy to interpret and understand and hence easy to use. It can be used in both normal and hard data and is pretty accurate if the data is not overfitting to the classifiers. 
 
-
-                               Fig 1.16 Decision Tree Code Snipet
 
 
 Random Forest
@@ -301,9 +182,8 @@ Random forest is a tree-based machine learning algorithm which involves building
 Firstly, the dataset is split into random samples by using bootstrap aggregating algorithm.  A new dataset is created by sampling n random cases from original data leaving about one third of data. 
 Then the new data obtained is trained using the given model in which very small columns of data are selected at random. At the end, each selected data is allowed to grow fully and final prediction is obtained by averaging.
  
-                                            Fig 1.17 Random Forest Code Snipet
-
-
+                                          
+                                          
 Extreme Gradient Boosting
 
 Gradient boosting is a machine learning algorithm which uses weak prediction models to create a final prediction model.
@@ -311,8 +191,7 @@ At first data is modelled onto simple models like decision trees and check for e
 For further models we fit the data onto error residuals as target with same input variables.
 Now it add the new error residuals with the original ones and fit the data onto updated error residuals.
 Repetition of  the steps are done until the sum of residuals become constant. In the end all predictors are added to predict outcome.
-                             Fig 1.18 Extreme Gradient Boosting Code Snipet
-
+                            
 
 
 Genetic Algorithm
@@ -323,8 +202,7 @@ First, we have a pool of different solutions in hand. These solutions undergo re
 Crossover is performed by randomly selecting solutions to produce offspring on the basis of fitness score. The fitter the solutions are, the fitter is their offspring. The process is repeated till a new batch of fitter solutions are created.
 
  
-                              Fig 1.19 Genetics Algorithm Code Snipet
-
+                             
 
 Neural Networks
 
@@ -335,17 +213,7 @@ The more the number of hidden layer, the more efficiently the model could learn 
 
 
  
-                           Fig 1.20 Neural Network Code Snipet
-
-
-
-
-
-
-
-
-
-
+ 
 
 Comparison Models
 
@@ -355,22 +223,7 @@ After applying seven algorithms i.e. Linear Regression, Baeysian Regression, Dec
 
 
  
-Fig 1.21 Accuracy Graph among different models for Heart disease 
 
- 
-Fig 1.22 Accuracy Graph among different models for Diabetes 
-
-
-
- 
-Fig 1.23 Accuracy Graph among different models for Breast cancer
-
-
- 
-Fig 1.24 Accuracy Graph among different models for Parkinsons 
-
-
- Fig 1.25 Accuracy Graph among different models for Kidney Disease
 
 Extreme Gradient Boosting, though not giving hundred percent accuracy, but was reliable. It gave considerable results with around ninety percent accuracy for each disease dataset. Hence we chose Extreme Gradient Booster as the optimal algorithm for Smart Electronics Health Record.
 
@@ -379,19 +232,13 @@ WEB BASED APPLICATION
 
 We incorporated a responsive web based frontend for easier and better experience for the users. They could easily enter the values of various parameters and see the output, thus taking steps accordingly.
  
-Fig 1.27 Responsive Web Application
+
 
 The web based application was made with R Shiny. The UI is highly responsive i.e. changing value of the single parameter will enable the computation again. 
 Users have the choice to test any of the disease provided that are : Heart, Diabetes, Kidney, Parkinson and Cancer. They could easily shuffle through tabs to enter their parameters value, thus giving them an user friendly web experience. 
 
 
 
-
-
-
-
-
-Fig 1.28 User Friendly and Easy to Use Website
 REFERENCES
 
 With the help and guidance of many people and online websites, we were able to achieve what we wished. Some of the references are:
